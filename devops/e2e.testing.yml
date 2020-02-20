@@ -1,0 +1,26 @@
+steps:
+  - task: NodeTool@0
+    displayName: 'Use Node 10.x'
+    inputs:
+      versionSpec: 10.x
+
+  - script: |
+      npm i
+    displayName: 'Install project dependencies'
+
+  - script: |
+      export PASSWORD=$(PASSWORD)
+      npm test
+    displayName: 'Run the tests'
+  
+  - task: PublishTestResults@2
+    displayName: 'Publish the test reports'
+    inputs:
+      testResultsFiles: '**/reports/junit.xml'
+    condition: succeededOrFailed()
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish screenshots'
+    inputs:
+      pathtoPublish: screenshots
+      artifactName: screenshots

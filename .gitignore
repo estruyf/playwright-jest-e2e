@@ -1,0 +1,9 @@
+# Folders
+dist
+node_modules
+
+# Files
+config.json
+screenshots/*.png
+screenshots/*.jpg
+.DS_Store

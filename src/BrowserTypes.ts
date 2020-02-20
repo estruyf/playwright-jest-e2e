@@ -1,0 +1,1 @@
+export const BrowserTypes = ["chromium", "firefox", "webkit"];
