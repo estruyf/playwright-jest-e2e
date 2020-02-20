@@ -20,6 +20,10 @@ for (const browserType of BrowserTypes) {
       // Open the new browser session based on the type
       browser = await PlaywrightHelper.initialize(browserType);
       page = await SharePointAuthentication.establish(browser, PAGE_URL);
+
+      if (!page) {
+        throw new Error("Connection wasn't established");
+      }
       
       // Set default viewport
       await page.setViewportSize({

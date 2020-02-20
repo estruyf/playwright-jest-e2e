@@ -22,6 +22,7 @@ if (!process.env.CI) {
     username: process.env.USERNAME,
     password: process.env.PASSWORD
   }
+  console.log(JSON.stringify(configObj));
 }
 
 export class SharePointAuthentication {
@@ -33,15 +34,21 @@ export class SharePointAuthentication {
    * @param pageUrl 
    */
   public static async establish(browser: playwright.Browser, pageUrl: string): Promise<playwright.Page> {
-    // Connect to SharePoint
-    const data  = await spauth.getAuth(pageUrl, configObj);
-    
-    // Create the new page
-    const page = await browser.newPage();
+    try {
+      // Connect to SharePoint
+      const data  = await spauth.getAuth(pageUrl, configObj);
+      console.log(`Connection established`);
+      
+      // Create the new page
+      const page = await browser.newPage();
 
-    // Add the authentication headers
-    await page.setExtraHTTPHeaders(data.headers);
+      // Add the authentication headers
+      await page.setExtraHTTPHeaders(data.headers);
 
-    return page;
+      return page;
+    } catch (error) {
+      console.log(`Connection failed`);
+      return null;
+    }
   }
 }

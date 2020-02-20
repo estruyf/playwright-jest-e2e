@@ -16,6 +16,8 @@ variables:
   - group: estruyf-prod
 - ${{ if ne(variables['build.SourceBranchName'], 'master') }}:
   - group: estruyf-dev
+- name: npm_config_cache
+  value: $(Pipeline.Workspace)/.npm
 
 stages:
 - stage: e2e_testing_stage

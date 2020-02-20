@@ -1,13 +1,17 @@
 {
   "name": "playwright-ui-testing",
   "version": "0.0.1",
-  "description": "",
+  "description": "Playwright E2E testing",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist && rm -rf reports",
     "test": "npm run clean && tsc && jest --runInBand --verbose",
     "brickheadz": "tsc && jest -i ./dist/tests/brickheadz.test.js --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://eliostruyf.visualstudio.com/sessions/_git/playwright-e2e-testing"
   },
   "keywords": [],
   "author": "",
