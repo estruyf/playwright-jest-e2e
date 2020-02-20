@@ -34,3 +34,4 @@ steps:
     inputs:
       pathtoPublish: screenshots
       artifactName: screenshots
+    continueOnError: true

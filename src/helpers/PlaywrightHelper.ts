@@ -28,8 +28,17 @@ export class PlaywrightHelper {
       const day = date.getDate();
       await page.screenshot({
         fullPage: true,
-        path: `./screenshots/${year}-${month}-${day}-${prefix || ""}${testName.replace(/ /g, "-")}${suffix || ""}.png`
+        path: `./screenshots/${year}-${month}-${day}-${prefix || ""}${this.replaceCharacters(testName)}${suffix || ""}.png`
       });
     }
+  }
+
+  /**
+   * Replace the special characters in the test name
+   * 
+   * @param testName 
+   */
+  private static replaceCharacters(testName: string): string {
+    return testName.replace(/ /g, "-").replace(/[/\\?%*:|"<>]/g, '-');
   }
 }
