@@ -38,8 +38,9 @@ for (const browserType of BrowserTypes) {
     /**
      * Things to do after all tests are completed
      */
-    afterAll(async () => {
+    afterAll(async (done) => {
       await browser.close();
+      done();
     });
 
     /**

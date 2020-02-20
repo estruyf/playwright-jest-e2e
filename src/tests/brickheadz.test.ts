@@ -54,7 +54,7 @@ for (const browserType of BrowserTypes) {
     /**
      * After all, reset the webpart settings
      */
-    afterAll(async () => {
+    afterAll(async (done) => {
       await PageHelper.triggerEdit(page);
       await WebPartHelper.clickEdit(page);
       
@@ -66,6 +66,7 @@ for (const browserType of BrowserTypes) {
       await PageHelper.triggerSave(page);
 
       await browser.close();
+      done();
     }, 30000);
 
     /**
