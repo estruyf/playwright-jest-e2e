@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist && rm -rf reports",
-    "test": "npm run clean && tsc && jest --runInBand --verbose",
-    "brickheadz": "tsc && jest -i ./dist/tests/brickheadz.test.js --verbose"
+    "test": "npm run clean && tsc && jest --runInBand --detectOpenHandles",
+    "brickheadz": "tsc && jest -i ./dist/tests/brickheadz.test.js"
   },
   "repository": {
     "type": "git",
