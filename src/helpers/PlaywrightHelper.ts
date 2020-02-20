@@ -39,6 +39,6 @@ export class PlaywrightHelper {
    * @param testName 
    */
   private static replaceCharacters(testName: string): string {
-    return testName.replace(/ /g, "-").replace(/\(\)[/\\?%*:|"<>]/g, '-');
+    return testName.replace(/ /g, "-").replace(/[()/\\?%*:|"<>]/g, '');
   }
 }
