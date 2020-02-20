@@ -22,7 +22,6 @@ if (!process.env.CI) {
     username: process.env.USERNAME,
     password: process.env.PASSWORD
   }
-  console.log(JSON.stringify(process.env));
 }
 
 export class SharePointAuthentication {

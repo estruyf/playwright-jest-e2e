@@ -17,10 +17,11 @@ steps:
       npm ci
     displayName: 'Install project dependencies'
 
-  - script: |
-      export PASSWORD=$(password)
+  - bash: |
       npm test
     displayName: 'Run the tests'
+    env:
+      PASSWORD: $(password)
   
   - task: PublishTestResults@2
     displayName: 'Publish the test reports'
