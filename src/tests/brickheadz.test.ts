@@ -85,7 +85,7 @@ for (const browserType of BrowserTypes) {
     /**
      * Check if the web part contains multiple brickheadz
      */
-    test('Check if web part contains multiple brickheadz', async () => {
+    test(`(${browserType}): Check if web part contains multiple brickheadz`, async () => {
       const images = await page.$$('div[data-ui-test-id="brickheadz-row"] img');
       expect(images.length).toBeGreaterThanOrEqual(2);
     });
@@ -93,7 +93,7 @@ for (const browserType of BrowserTypes) {
     /**
      * 
      */
-    test('Update the webpart properties to use "all"', async () => {
+    test(`(${browserType}): Update the webpart properties to use "all"`, async () => {
       await PageHelper.triggerEdit(page);
       await WebPartHelper.clickEdit(page);
       

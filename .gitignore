@@ -1,6 +1,7 @@
 # Folders
 dist
 node_modules
+reports
 
 # Files
 config.json
