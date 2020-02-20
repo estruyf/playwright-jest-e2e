@@ -1,6 +1,6 @@
 module.exports = {
   globals: {
-    headless: process.env.CI == true
+    headless: process.env.CI == "true"
   },
   testPathIgnorePatterns: [
     "<rootDir>/src/", 
@@ -12,7 +12,9 @@ module.exports = {
       "jest-junit", {
         "suiteName": "SharePoint SPFx Testing",
         "outputDirectory": "./reports/",
-        "outputName": "./junit.xml"
+        "outputName": "./junit.xml",
+        "usePathForSuiteName": "true",
+        "includeConsoleOutput": "true"
       }
     ],
     [

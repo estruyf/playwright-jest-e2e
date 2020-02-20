@@ -55,6 +55,9 @@ for (const browserType of BrowserTypes) {
      * After all, reset the webpart settings
      */
     afterAll(async (done) => {
+      // Delay because there is a transition
+      await page.waitFor(2000);
+      
       await PageHelper.triggerEdit(page);
       await WebPartHelper.clickEdit(page);
       

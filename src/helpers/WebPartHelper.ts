@@ -1,8 +1,6 @@
 import * as playwright from 'playwright';
 import { CONTROL_ZONE, WEBPART_EDIT, WEBPART_TOOLBOX } from '../constants';
 
-
-
 export class WebPartHelper {
 
   /**
