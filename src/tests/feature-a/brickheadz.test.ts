@@ -1,7 +1,7 @@
 import * as playwright from 'playwright';
-import { BrowserTypes } from '../BrowserTypes';
-import { PageHelper, WebPartHelper, PropertyPaneHelper, PlaywrightHelper } from '../helpers';
-import { SharePointAuthentication } from '../helpers/SharePointAuthentication';
+import { BrowserTypes } from '../../BrowserTypes';
+import { PageHelper, WebPartHelper, PropertyPaneHelper, PlaywrightHelper } from '../../helpers';
+import { SharePointAuthentication } from '../../helpers/SharePointAuthentication';
 
 const PAGE_URL = "https://estruyfdev2.sharepoint.com/sites/ECS2019";
 

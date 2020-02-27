@@ -1,6 +1,6 @@
 import * as playwright from 'playwright';
-import { BrowserTypes } from '../BrowserTypes';
-import { PlaywrightHelper, SharePointAuthentication } from '../helpers';
+import { BrowserTypes } from '../../BrowserTypes';
+import { PlaywrightHelper, SharePointAuthentication } from '../../helpers';
 
 const PAGE_URL = "https://estruyfdev2.sharepoint.com/sites/AutomatedUITests";
 

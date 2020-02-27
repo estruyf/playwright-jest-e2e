@@ -1,5 +1,5 @@
 {
-  "name": "playwright-ui-testing",
+  "name": "playwright-jest-e2e",
   "version": "0.0.1",
   "description": "Playwright E2E testing",
   "main": "./dist/index.js",
@@ -14,7 +14,7 @@
     "url": "https://eliostruyf.visualstudio.com/sessions/_git/playwright-e2e-testing"
   },
   "keywords": [],
-  "author": "",
+  "author": "Elio Struyf",
   "license": "MIT",
   "dependencies": {
     "cpass": "2.2.0",
